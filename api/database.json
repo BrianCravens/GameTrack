@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Kratos",
+      "password": "0033"
+    },
+    {
+      "username": "Brian",
+      "password": "0033",
+      "id": 3
+    },
+    {
+      "username": "Derick",
+      "password": "0033",
+      "id": 4
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "userId": 1,
+      "gameApiId": 1,
+      "isFavorite": true,
+      "isWhishList": true,
+      "isCompletion": true
+    }
+  ],
+  "reviews": [
+    {
+      "id": 1,
+      "userId": 1,
+      "gameApiId": 1,
+      "description": "Awesome!"
+    }
+  ]
+}

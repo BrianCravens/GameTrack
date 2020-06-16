@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import ApplicationViews from './components/ApplicationViews';
+import NavBar from "./components/nav/NavBar"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+const App = (props) => {
+  //Returns true or false
+  const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
+  //Set to value of isAuthenticated / true or false
+  const [hasUser, setHasUser] = useState(isAuthenticated());
+  //Adding user to Session Storage setHasUser
+  const setUser = user => {
+    sessionStorage.setItem("credentials", JSON.stringify(user));
+    setHasUser(isAuthenticated());
+  };
+  const clearUser = () => {
+    sessionStorage.clear();
+    setHasUser(isAuthenticated());
+  }
+
+  return(
+    <>
+    <NavBar hasUser={hasUser} setUser={setUser} clearUser={clearUser}/>
+    <ApplicationViews hasUser={hasUser} setUser={setUser}/>    
+    </>
+  )
 }
 
 export default App;

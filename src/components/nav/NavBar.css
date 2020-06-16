@@ -1,0 +1,45 @@
+small {
+    font-size: 75%;
+  }
+  
+  header {
+    background-color: rgb(14, 13, 14);
+    border: rgb(12, 12, 12) solid 3px;
+  }
+  
+  .site-title {
+    color: rgb(40, 168, 34);
+    text-align: center;
+  }
+  .nav-container{
+    background-color: rgb(40, 168, 34);
+  }
+  .nav-bar {
+    flex-basis: auto;   
+
+  }
+  .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  nav .container li {
+    padding: 5px;
+    text-align: center;
+    font-size: 1.5em;
+    color: cornsilk;
+    box-sizing: border-box;
+    background-color: rgb(40, 168, 34);
+    list-style-type: none;
+  }
+  
+  .nav-link {
+    color: rgb(14, 13, 13);
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .nav-link:hover {
+    color: rgb(250, 246, 246);
+  }
