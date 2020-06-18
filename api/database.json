@@ -24,6 +24,53 @@
       "isFavorite": true,
       "isWhishList": true,
       "isCompletion": true
+    },
+    {
+      "gameApiId": 3328,
+      "isfavorite": true,
+      "isWhishList": false,
+      "isCompletion": false,
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "gameApiId": 5286,
+      "isfavorite": false,
+      "isWhishList": false,
+      "isCompletion": true,
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "gameApiId": 4062,
+      "isfavorite": true,
+      "isWhishList": true,
+      "isCompletion": true,
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "gameApiId": 5679,
+      "isfavorite": true,
+      "isWhishList": false,
+      "isCompletion": true,
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "gameApiId": 1030,
+      "isfavorite": false,
+      "isWhishList": true,
+      "isCompletion": false,
+      "id": 6
+    },
+    {
+      "userId": 1,
+      "gameApiId": 3439,
+      "isfavorite": false,
+      "isWhishList": true,
+      "isCompletion": false,
+      "id": 7
     }
   ],
   "reviews": [

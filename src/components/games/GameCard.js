@@ -16,7 +16,7 @@ const GameCard = (props) => {
                 </div>
             <p className = "rating">{props.game.rating}</p>
             <div className = "Info">
-            <button className = "btn-Info">Info</button>
+            <button className = "btn-Info" onClick={() => props.history.push(`/games/${props.game.id}`)}>Info</button>
             </div></div>
         </div>
     )

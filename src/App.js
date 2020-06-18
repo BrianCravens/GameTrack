@@ -9,9 +9,12 @@ const App = (props) => {
   const isAuthenticated = () => sessionStorage.getItem("credentials") !== null;
   //Set to value of isAuthenticated / true or false
   const [hasUser, setHasUser] = useState(isAuthenticated());
+  const [userId, setUserId] = useState()
   //Adding user to Session Storage setHasUser
   const setUser = user => {
-    sessionStorage.setItem("credentials", JSON.stringify(user));
+    sessionStorage.setItem("credentials", parseInt(user.id));
+    console.log(user.id)
+    setUserId(user.id)
     setHasUser(isAuthenticated());
   };
   const clearUser = () => {
@@ -21,8 +24,8 @@ const App = (props) => {
 
   return(
     <>
-    <NavBar hasUser={hasUser} setUser={setUser} clearUser={clearUser}/>
-    <ApplicationViews hasUser={hasUser} setUser={setUser}/>    
+    <NavBar userId={userId} hasUser={hasUser} setUser={setUser} clearUser={clearUser}/>
+    <ApplicationViews userId={userId }hasUser={hasUser} setUser={setUser}/>    
     </>
   )
 }

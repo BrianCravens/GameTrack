@@ -21,7 +21,6 @@ const Login = props => {
       if (user.length < 1) 
       {window.alert("Account does not exist")
       }else{
-        console.log(user[0])
         props.setUser(user[0])
         props.history.push("/games")
       }
