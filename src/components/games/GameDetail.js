@@ -7,52 +7,58 @@ import "./GameDetail.css";
 const GameDetail = (props) => {
   const [checkboxes, setCheckboxes] = useState({fav: false, wish:false, comp: false })  
   const [game, setGame] = useState({clip: {}, genres: [], developers: []});
-  const [isLoading, setIsLoading] = useState(true)
+  const [isLoading, setIsLoading] = useState(false)
   const [loggedUser, setLoggedUser] = useState(parseInt(sessionStorage.getItem("credentials")))
-  console.log(loggedUser)
 
+  
 const handleCheckBoxes = (e) => {
   const stateToChange = {...checkboxes}
   stateToChange[e.target.id] = e.target.checked;
   setCheckboxes(stateToChange)
 }
 
-const handleCheckboxSave = () => {
-  //create new game object
-  //add properties to that object
-  //--gameId, userId, checkbox props
-  //POST to DB
-  //redirect ?
+const handleCheckboxSave = (e) => {
+e.preventDefault()
+setIsLoading(true)
   const editedGame = {
     userId: loggedUser,
+    name: game.name,
     gameApiId: props.gameId,
-    isfavorite: checkboxes.fav,
+    isFavorite: checkboxes.fav,
     isWishList: checkboxes.wish,
     isCompletion: checkboxes.comp
   }
   GameManager.getUserGame(props.gameId).then((userGame) => {
-    if (userGame = !undefined){window.alert("game exists")
-  }else{
-    
+    if (userGame.length !== 0){
+      GameManager.updateUserGame(editedGame,userGame[0].id).then(() => {
+        window.alert("Your game has been updated!")
+        props.history.push(`/games`)
+      })
+    }else{
       GameManager.createGame(editedGame).then((newgame) => {
-      window.alert("Game has been added to your account!")
-      props.history.push(`/games`)
-    
-    })
-  }            
-})
-  
-
+        window.alert("Game has been added to your account!")
+        props.history.push(`/games`)
+      })
+    }            
+  })
 }
-
 useEffect(() => {
     GameManager.get(props.gameId)
     .then(gameFromAPI => {setGame(gameFromAPI);
     });
+    
     setIsLoading(false)
+},[props.gameId]);
 
-  },[props.gameId]);
 useEffect(() => {
+  GameManager.getUserGame(props.gameId).then((userGame)=>{
+    if (userGame.length !== 0){
+      console.log(userGame)
+    checkboxes.fav = userGame[0].isFavorite
+    checkboxes.wish = userGame[0].isWishList
+    checkboxes.comp = userGame[0].isCompletion
+    }
+  }) 
 }, [game])
 
   return (

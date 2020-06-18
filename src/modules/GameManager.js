@@ -37,7 +37,25 @@ export default {
       }).then((data => data.json()))
     },
     getUserGame(gameApiId) {
-      return fetch(`${remoteURL}/games?gameApiId=${gameApiId}`).then(result => result.json())
+      return fetch(`${remoteURL}/games?gameApiId=${gameApiId}`).then(results => results.json())
+    },
+    updateUserGame(gameObject, userGameId) {
+      return fetch(`${remoteURL}/games/${userGameId}`, {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(gameObject)
+      }).then(results => results.json())
+    },
+    getFavGames(){
+      return fetch(`${remoteURL}/games?isFavorite=true`).then(results => results.json())
+    },
+    getWishList(){
+      return fetch(`${remoteURL}/games?isWishList=true`).then(results => results.json())
+    },
+    getCompList(){
+      return fetch(`${remoteURL}/games?isCompletion=true`).then(results => results.json())
     }
 
 }

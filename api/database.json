@@ -18,59 +18,85 @@
   ],
   "games": [
     {
-      "id": 1,
       "userId": 1,
-      "gameApiId": 1,
-      "isFavorite": true,
-      "isWhishList": true,
-      "isCompletion": true
-    },
-    {
+      "name": "The Witcher 3: Wild Hunt",
       "gameApiId": 3328,
-      "isfavorite": true,
-      "isWhishList": false,
-      "isCompletion": false,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
       "id": 2
     },
     {
       "userId": 1,
-      "gameApiId": 5286,
-      "isfavorite": false,
-      "isWhishList": false,
+      "name": "Grand Theft Auto V",
+      "gameApiId": 3498,
+      "isFavorite": true,
+      "isWishList": false,
       "isCompletion": true,
       "id": 3
     },
     {
       "userId": 1,
-      "gameApiId": 4062,
-      "isfavorite": true,
-      "isWhishList": true,
+      "name": "The Elder Scrolls V: Skyrim",
+      "gameApiId": 5679,
+      "isFavorite": false,
+      "isWishList": false,
       "isCompletion": true,
       "id": 4
     },
     {
       "userId": 1,
-      "gameApiId": 5679,
-      "isfavorite": true,
-      "isWhishList": false,
+      "name": "Tomb Raider (2013)",
+      "gameApiId": 5286,
+      "isFavorite": true,
+      "isWishList": false,
       "isCompletion": true,
       "id": 5
     },
     {
       "userId": 1,
-      "gameApiId": 1030,
-      "isfavorite": false,
-      "isWhishList": true,
+      "name": "Portal",
+      "gameApiId": 13536,
+      "isFavorite": false,
+      "isWishList": false,
       "isCompletion": false,
       "id": 6
     },
     {
       "userId": 1,
+      "name": "Life is Strange",
       "gameApiId": 3439,
-      "isfavorite": false,
-      "isWhishList": true,
+      "isFavorite": false,
+      "isWishList": true,
       "isCompletion": false,
       "id": 7
+    },
+    {
+      "userId": 1,
+      "name": "BioShock",
+      "gameApiId": 4286,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 8
+    },
+    {
+      "userId": 1,
+      "name": "Borderlands 2",
+      "gameApiId": 802,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "name": "Portal 2",
+      "gameApiId": 4200,
+      "isFavorite": false,
+      "isWishList": true,
+      "isCompletion": false,
+      "id": 10
     }
   ],
   "reviews": [
