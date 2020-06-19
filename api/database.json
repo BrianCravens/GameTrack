@@ -101,10 +101,39 @@
   ],
   "reviews": [
     {
-      "id": 1,
       "userId": 1,
-      "gameApiId": 1,
-      "description": "Awesome!"
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "description": "Awesome Game.  Controls are a bit funky but story line is very good.",
+      "id": 2
+    },
+    {
+      "userId": 1,
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "description": "Graphics were kinda ehh but good for its time.",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "description": "Fantastic Music",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "description": "This Game is Terrible!!!!",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "description": "dsdfsdf",
+      "id": 6
     }
   ]
 }

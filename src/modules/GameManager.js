@@ -15,6 +15,9 @@ export default {
     getUser(username, password) {
         return fetch (`${remoteURL}/users?username=${username}&password=${password}`).then(result => result.json())
     },
+    getUserId(id) {
+        return fetch (`${remoteURL}/users/${id}`).then(result => result.json())
+    },
     getUsers(){
         return fetch (`${remoteURL}/users`).then(results => results.json())
     },
@@ -56,6 +59,19 @@ export default {
     },
     getCompList(){
       return fetch(`${remoteURL}/games?isCompletion=true`).then(results => results.json())
+    },
+    getGameReviews(gameApiId){
+      return fetch(`${remoteURL}/reviews??gameApiId=${gameApiId}?_expand=user`).then(results => results.json())
+
+    },
+    createReview(reviewObject){
+      return fetch(`${remoteURL}/reviews`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(reviewObject)
+      }).then((data => data.json()))
     }
 
 }
