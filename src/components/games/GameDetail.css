@@ -31,11 +31,11 @@
   color: aliceblue;
   display: flex;
   padding-top: 1em;
-  padding-left: 6em;
+  padding-left: 8em;
   padding-right: 0em;
   padding-bottom: 1em;
   flex: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-content: center;
 }
 .checkbox{

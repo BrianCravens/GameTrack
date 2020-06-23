@@ -18,12 +18,12 @@
   ],
   "games": [
     {
-      "userId": 1,
+      "userId": 3,
       "name": "The Witcher 3: Wild Hunt",
       "gameApiId": 3328,
-      "isFavorite": true,
-      "isWishList": false,
-      "isCompletion": true,
+      "isFavorite": false,
+      "isWishList": true,
+      "isCompletion": false,
       "id": 2
     },
     {
@@ -32,7 +32,7 @@
       "gameApiId": 3498,
       "isFavorite": true,
       "isWishList": false,
-      "isCompletion": true,
+      "isCompletion": false,
       "id": 3
     },
     {
@@ -45,12 +45,12 @@
       "id": 4
     },
     {
-      "userId": 1,
+      "userId": 3,
       "name": "Tomb Raider (2013)",
       "gameApiId": 5286,
       "isFavorite": true,
       "isWishList": false,
-      "isCompletion": true,
+      "isCompletion": false,
       "id": 5
     },
     {
@@ -72,10 +72,10 @@
       "id": 7
     },
     {
-      "userId": 1,
+      "userId": 3,
       "name": "BioShock",
       "gameApiId": 4286,
-      "isFavorite": true,
+      "isFavorite": false,
       "isWishList": false,
       "isCompletion": true,
       "id": 8
@@ -97,22 +97,69 @@
       "isWishList": true,
       "isCompletion": false,
       "id": 10
+    },
+    {
+      "userId": "1",
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "name": "Fallout 4",
+      "gameApiId": 3070,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "name": "Red Dead Redemption 2",
+      "gameApiId": 28,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 13
+    },
+    {
+      "userId": 1,
+      "name": "BioShock Infinite",
+      "gameApiId": 4062,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 14
+    },
+    {
+      "userId": 1,
+      "name": "Team Fortress 2",
+      "gameApiId": 11859,
+      "isFavorite": false,
+      "isWishList": false,
+      "isCompletion": false,
+      "id": 15
+    },
+    {
+      "userId": "1",
+      "name": "Tomb Raider (2013)",
+      "gameApiId": 5286,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 16
     }
   ],
   "reviews": [
     {
       "userId": 1,
       "name": "The Witcher 3: Wild Hunt",
-      "id": 2,
+      "id": 3,
       "gameApiId": 3328,
-      "description": "Hello"
-    },
-    {
-      "userId": 1,
-      "name": "The Witcher 3: Wild Hunt",
-      "gameApiId": 3328,
-      "description": "Love This Game",
-      "id": 3
+      "description": "Love This Game!!"
     },
     {
       "userId": 1,
@@ -124,9 +171,58 @@
     {
       "userId": 1,
       "name": "Tomb Raider (2013)",
+      "id": 5,
       "gameApiId": 5286,
-      "description": "One of my Favs fo sho!!\n",
-      "id": 5
+      "description": "One of my Favs fo sho yo yo yo yo yo\n"
+    },
+    {
+      "userId": 3,
+      "name": "Grand Theft Auto V",
+      "gameApiId": 3498,
+      "description": "This game is very violent and should not be played by children for fear of their minds being corrupted from the bloodshed. ",
+      "id": 6
+    },
+    {
+      "userId": 3,
+      "name": "BioShock",
+      "gameApiId": 4286,
+      "description": "One of my favorites of all time.  I really hope they continue to make them! ",
+      "id": 7
+    },
+    {
+      "userId": 3,
+      "name": "The Witcher 3: Wild Hunt",
+      "id": 8,
+      "gameApiId": 3328,
+      "description": "One of the most creative and in depth story lines out there.  Awesome Awesome Awesome Fantastic. You should play it like for sure!"
+    },
+    {
+      "userId": 1,
+      "name": "Grand Theft Auto V",
+      "gameApiId": 3498,
+      "description": "This game could have a negative effect on what is appropriate while driving.",
+      "id": 9
+    },
+    {
+      "userId": 1,
+      "name": "Red Dead Redemption 2",
+      "gameApiId": 28,
+      "description": "Do you like fishing? Do you like roping people and dragging them behind your horse? Or just enjoy shooting stuff?  Then this game is for you! ",
+      "id": 11
+    },
+    {
+      "userId": 1,
+      "name": "The Elder Scrolls V: Skyrim",
+      "gameApiId": 5679,
+      "description": "Awesome game! I believe I wasted 500hrs of my life I'll never get back playing it.  So use with moderation.",
+      "id": 12
+    },
+    {
+      "userId": 1,
+      "name": "Borderlands 2",
+      "gameApiId": 802,
+      "description": "Awesome game, but definitely a game you want to play with a friend! Co-op is tons of fun here.",
+      "id": 14
     }
   ]
 }

@@ -5,9 +5,8 @@ const GameCard = (props) => {
     return(
         <div className="card">
             <div className="card-content">
-                <picture>
-                    <img src={props.game.background_image} alt="background image"/>
-                </picture>
+                
+                    <img src={props.game.background_image} alt={"background image" + props.gameId}/>
                 <h3>
                     <span className = "card-name">{props.game.name}</span>
                 </h3>

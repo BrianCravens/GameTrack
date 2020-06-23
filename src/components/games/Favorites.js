@@ -5,8 +5,8 @@ import "../../App.css";
 
 const FavList = (props) => {
     const [games, setGames] = useState([]);
-    const getUserGames = () => {
-        return GameManager.getFavGames().then(favGames => {
+    const getUserGames = (id) => {
+        return GameManager.getFavGames(id).then(favGames => {
             const gameFetches = favGames.map(game => GameManager.get(game.gameApiId))
             Promise.all(gameFetches)
             .then((games) => {
@@ -15,7 +15,7 @@ const FavList = (props) => {
         })  
     };
     useEffect(() => {
-        getUserGames();
+        getUserGames(sessionStorage.getItem("credentials"));
     }, []);
     useEffect(() => {
     }, [games]);

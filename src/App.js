@@ -25,7 +25,7 @@ const App = (props) => {
   return(
     <>
     <NavBar userId={userId} hasUser={hasUser} setUser={setUser} clearUser={clearUser}/>
-    <ApplicationViews userId={userId }hasUser={hasUser} setUser={setUser}/>    
+    <ApplicationViews userId={userId} hasUser={hasUser} setUser={setUser}/>    
     </>
   )
 }

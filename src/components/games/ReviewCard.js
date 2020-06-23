@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Modal from 'react-modal'
 import '../games/GameDetail.css';
 import GameManager from '../../modules/GameManager'
+Modal.setAppElement(`*`)
 
 const ReviewCard = (props) => {
     const [isLoading, setIsLoading] = useState(false)
@@ -13,17 +14,23 @@ const ReviewCard = (props) => {
             setUsername(user)
         })
     }
+    const getReviews = () => {
+        GameManager.getGameReviews(props.gameId)
+        .then(reviewsBack => {props.setGameReviews(reviewsBack)
+        });
+      }
     const handleFieldChange = (event) => {
         const stateToChange = {...review}
         stateToChange[event.target.id] = event.target.value;
         setReview(stateToChange)
     }
 
+
     const handleDelete = (id) => {
         setIsLoading(true)
         GameManager.deleteReview(id)
+        getReviews()
     }
-
     const handleEdit = (event) => {
         event.preventDefault()
         setIsLoading(true)
@@ -35,16 +42,18 @@ const ReviewCard = (props) => {
         gameApiId: props.review.gameApiId,
         description: review.description
         }
-        GameManager.updateReview(editedReview)
-            .then(() => setModalIsOpen(false))
+        GameManager.updateReview(editedReview).then(() =>
+            setModalIsOpen(false))
             props.history.push(`/games/${props.gameId}`)
-        setIsLoading(false)
+            getReviews()
+            setIsLoading(false)
 
     }
 
     useEffect(() => {
         getUsername(props.review.userId)
-    },[])
+
+    },[props.review.userId])
 
 
     return(
@@ -54,8 +63,8 @@ const ReviewCard = (props) => {
         {props.review.description}
         </div>
         <div>
-        <button className = "review-edit" id= {"edit--" + props.review.id} onClick = {() => setModalIsOpen(true)} >Edit</button>
-        <button className = "review-delete" disabled={isLoading} id= {"delete--" + props.review.id} onClick = {() => handleDelete(props.review.id)}>Delete</button>
+        {parseInt(sessionStorage.getItem("credentials")) === props.review.userId && <button className = "review-edit" id= {"edit--" + props.review.id} onClick = {() => setModalIsOpen(true)} >Edit</button>}
+        {parseInt(sessionStorage.getItem("credentials")) === parseInt(props.review.userId) && <button className = "review-delete" disabled={isLoading} id= {"delete--" + props.review.id} onClick = {() => handleDelete(props.review.id)}>Delete</button>}
         </div>
         <Modal className="modal-container" isOpen={modalIsOpen} onRequestClose = {() => setModalIsOpen(false)}>
             <textarea id = "description" className="modal-textarea" onChange= {handleFieldChange} defaultValue={props.review.description}></textarea>

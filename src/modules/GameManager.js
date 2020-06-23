@@ -42,6 +42,9 @@ export default {
     getUserGame(gameApiId) {
       return fetch(`${remoteURL}/games?gameApiId=${gameApiId}`).then(results => results.json())
     },
+    getUserGameProps(gameApiId, userId) {
+      return fetch(`${remoteURL}/games?gameApiId=${gameApiId}&userId=${userId}`).then(results => results.json())
+    },
     updateUserGame(gameObject, userGameId) {
       return fetch(`${remoteURL}/games/${userGameId}`, {
         method: "PUT",
@@ -51,14 +54,14 @@ export default {
         body: JSON.stringify(gameObject)
       }).then(results => results.json())
     },
-    getFavGames(){
-      return fetch(`${remoteURL}/games?isFavorite=true`).then(results => results.json())
+    getFavGames(userId){
+      return fetch(`${remoteURL}/games?userId=${userId}&isFavorite=true`).then(results => results.json())
     },
-    getWishList(){
-      return fetch(`${remoteURL}/games?isWishList=true`).then(results => results.json())
+    getWishList(userId){
+      return fetch(`${remoteURL}/games?userId=${userId}&isWishList=true`).then(results => results.json())
     },
-    getCompList(){
-      return fetch(`${remoteURL}/games?isCompletion=true`).then(results => results.json())
+    getCompList(userId){
+      return fetch(`${remoteURL}/games?userId=${userId}&isCompletion=true`).then(results => results.json())
     },
     getGameReviews(gameApiId){
       return fetch(`${remoteURL}/reviews?gameApiId=${gameApiId}`).then(results => results.json())
@@ -85,5 +88,11 @@ export default {
       return fetch(`${remoteURL}/reviews/${id}`, {
       method: "DELETE"
       }).then(results => results.json())
+    },
+    getUserReviews(userId){
+      return fetch(`${remoteURL}/reviews?userId=${userId}`).then(results => results.json())
+    },
+    getReviewId(id){
+      return fetch(`${remoteURL}/reviews/${id}`).then(results => results.json())
     }
 }

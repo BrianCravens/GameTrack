@@ -1,9 +1,7 @@
 import React from 'react';
 import {withRouter} from 'react-router-dom';
 import {Link} from 'react-router-dom';
-import Popup from 'reactjs-popup'
 import "./NavBar.css"
-import Login from '../auth/Login'
 
 const NavBar = (props) => {
     const handleLogout = () => {
