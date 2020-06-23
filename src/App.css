@@ -1,5 +1,7 @@
 .section-content {
   background-color: rgb(40, 168, 34);
+  justify-content: center;
+  text-align: center;
 }
 .card {
   /* Add shadows to create the "card" effect */
@@ -12,15 +14,14 @@
 }
 
 .card-content {
+  text-align: center;
   padding: 1em;
   color: aliceblue;
 }
 .card-name {
 }
 .genre-container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+  padding-top: 1em;
 }
 .Info {
   display: flex;

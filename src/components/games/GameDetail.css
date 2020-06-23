@@ -1,22 +1,130 @@
-/* these make sure it can work in any text element */
-.inline-text_copy--active,
-.inline-text_input--active {
-  font: inherit;
-  color: inherit;
-  text-align: inherit;
-  padding: 0;
-  background: none;
-  border: none;
-  border-bottom: 1px dashed #666666;
+.game-details{
+  background-color: black;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
 }
-.inline-text_copy--active {
-  cursor: pointer;
+.video-container{
+  align-items: center;
 }
-.inline-text_copy--hidden,
-.inline-text_input--hidden {
-  display: none;
+
+.modal-container{
+  display: flex;
+  flex-direction: column;
+  background: #666666;
+  width: 600px;
+  height: 200px;
+  position: fixed;
+  top: 400px;
+  left: 400px;
 }
-.inline-text_input--active {
-  border-bottom: 1px solid #666666;
-  text-align: left;
+.modal-textarea{
+  width: 600px;
+  height: 100px;
 }
+.checkbox-container{
+  font-size: large;
+
+  flex-direction: row;
+  color: aliceblue;
+  display: flex;
+  padding-top: 1em;
+  padding-left: 6em;
+  padding-right: 0em;
+  padding-bottom: 1em;
+  flex: 100%;
+  justify-content: space-between;
+  align-content: center;
+}
+.checkbox{
+  font-family: Arial, Helvetica, sans-serif 15pt;
+  width:25px;
+    height:25px;
+    background:white;
+    border-radius:4px;
+    border:2px solid #555;
+}
+.save-checkbox{
+  margin-left: 6em;
+  justify-content: flex-end;
+
+}
+.game-description{
+  font-size: large;
+}
+.review-user{
+  align-items: flex-start;
+  padding: 0em;
+  flex: 5%;
+  color: rgb(40, 168, 34)
+}
+.review-content{
+  color: black;
+  border: solid 1px gray;
+  background-color: silver ;
+  font-size: x-large;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 0em;
+  flex-basis: 90%;
+  text-align: center;
+}
+.reviews-container{
+  border: solid 1px aliceblue;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 100%;
+  padding: 2em;
+  justify-content: flex-end;
+}
+.user-reviews-header{
+  flex: 100%;
+  text-align: center;
+  background-color:rgb(40, 168, 34);
+  color: aliceblue;
+}
+.genre-container{
+  font-size: large;
+  flex: 100%;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.genre-container > h3{
+  color: rgb(40, 168, 34)
+}
+.review-btns{
+  background-color: silver;
+  justify-content: flex-end;
+}
+.review-cards{
+  align-items: center;
+  flex: 100%;
+}
+.all-reviews-container{
+  flex: 100%;
+}
+/* New Review */
+ .new-form-container{
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: flex-end;
+   padding-left: 6em;
+   padding-right: 6em;
+   flex: 100%;
+
+ }
+ .new-review-container{
+   padding: 2em;
+   flex: 100%
+ }
+ .new-review-content{
+   flex: 100%;
+   background-color: silver;
+ }
+ /* */

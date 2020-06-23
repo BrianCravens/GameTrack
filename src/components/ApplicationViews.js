@@ -22,6 +22,9 @@ const ApplicationViews = (props) => {
             <Route exact path = "/games" render={(props) => {
                return <GameList userId= {userId} setUser={setUser} {...props}/>
             }}/>
+            <Route exact path = "/" render={(props) => {
+               return <GameList userId= {userId} setUser={setUser} {...props}/>
+            }}/>
             <Route exact path = "/games/:gameId(\d+)" render={(props) => {
                return <GameDetail  gameId={parseInt(props.match.params.gameId)} userId= {userId} setUser={setUser} {...props}/>
             }}/>

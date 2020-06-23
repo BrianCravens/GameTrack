@@ -61,8 +61,7 @@ export default {
       return fetch(`${remoteURL}/games?isCompletion=true`).then(results => results.json())
     },
     getGameReviews(gameApiId){
-      return fetch(`${remoteURL}/reviews??gameApiId=${gameApiId}?_expand=user`).then(results => results.json())
-
+      return fetch(`${remoteURL}/reviews?gameApiId=${gameApiId}`).then(results => results.json())
     },
     createReview(reviewObject){
       return fetch(`${remoteURL}/reviews`, {
@@ -72,6 +71,19 @@ export default {
         },
         body: JSON.stringify(reviewObject)
       }).then((data => data.json()))
+    },
+    updateReview(reviewObject){
+      return fetch(`${remoteURL}/reviews/${reviewObject.id}`,{
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      }, 
+      body: JSON.stringify(reviewObject)
+      }).then((results => results.json()))
+    },
+    deleteReview(id){
+      return fetch(`${remoteURL}/reviews/${id}`, {
+      method: "DELETE"
+      }).then(results => results.json())
     }
-
 }
