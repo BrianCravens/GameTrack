@@ -3,6 +3,35 @@
   justify-content: center;
   text-align: center;
 }
+.select-container{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.search-container{
+  display: flex;
+  justify-content: flex-end;
+  flex: 50%
+}
+.genre-label{
+  font-size: larger;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em;
+  color:black;
+}
+.filter-genre{
+  background-color: aliceblue;
+  align-content: flex-end;
+  justify-content: start;
+}
+.search-input{
+  background-color: aliceblue;
+  justify-content: flex-end;
+  padding-right: 8em;
+  color: #000000;
+}
 .card {
   /* Add shadows to create the "card" effect */
   box-shadow: 0 4px 8px 0 rgba(34, 33, 33, 0.281);

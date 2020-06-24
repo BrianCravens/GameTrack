@@ -3,19 +3,24 @@ small {
   }
   
   header {
-    background-color: rgb(14, 13, 14);
+    background-color: rgb(7, 7, 7);
     border: rgb(12, 12, 12) solid 3px;
+    margin: 0em;
+    padding: 1em;
   }
   
   .site-title {
     color: rgb(40, 168, 34);
     text-align: center;
+    background-color: black;
   }
   .nav-container{
     background-color: rgb(40, 168, 34);
   }
   .nav-bar {
-    flex-basis: auto;   
+    flex-basis: auto;
+    padding: 0%;   
+    margin: 0%;
 
   }
   .container{

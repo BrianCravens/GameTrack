@@ -98,7 +98,8 @@ useEffect(() => {
   return (
     <div className="game-details">
         <div className = "video-container">
-          <ReactPlayer playing={false} controls={true} url={game.clip.clip}/>
+          {game.clip == null && <img src={game.background_image}/>}
+          {game.clip !== null &&<ReactPlayer playing={false} controls={true} url={game.clip.clip}/>}
         </div>
       <div className="card-content">
           <h3>

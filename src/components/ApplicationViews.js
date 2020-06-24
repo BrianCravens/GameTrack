@@ -7,6 +7,8 @@ import Favorites from "../components/games/Favorites"
 import WishList from "../components/games/WishList"
 import Completions from "../components/games/Completions"
 import MyReviews from "../components/games/MyReviews"
+import DeveloperList from "./games/DeveloperList";
+import DeveloperGameList from "./games/DeveloperGameList"
 
 const ApplicationViews = (props) => {
     const hasUser = props.hasUser;
@@ -40,6 +42,12 @@ const ApplicationViews = (props) => {
             }}/>
             <Route exact path = "/myReviews" render={(props) => {
                return <MyReviews userId= {userId} setUser={setUser} {...props}/>
+            }}/>
+            <Route exact path = "/developers" render={(props) => {
+               return <DeveloperList userId= {userId} setUser={setUser} {...props}/>
+            }}/>
+            <Route exact path = "/developers/:devId(\d+)/games" render={(props) => {
+               return <DeveloperGameList devId={parseInt(props.match.params.devId)} userId= {userId} setUser={setUser} {...props}/>
             }}/>
         </React.Fragment>
     )

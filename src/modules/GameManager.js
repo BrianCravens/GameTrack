@@ -3,13 +3,31 @@ const remoteURL = "http://localhost:5002"
 export default {
 
     getAll() {
-        return fetch ('https://api.rawg.io/api/games').then(result => result.json())
+        return fetch ('https://api.rawg.io/api/games?page_size=200').then(result => result.json())
     },
     get(id){
       return fetch (`https://api.rawg.io/api/games/${id}`).then(result => result.json())
     },
     getMovie(id){
       return fetch (`https://api.rawg.io/api/games/${id}/movies`).then(result => result.json())
+    },
+    getSearchName(inputText){
+      return fetch (`https://rawg.io/api/games?page_size=200&search=${inputText}&page=1`).then(result => result.json())
+    },
+    getSearchDeveloper(inputText){
+      return fetch (`https://rawg.io/api/developers?page_size=200&search=${inputText}&page=1`).then(result => result.json())
+    },
+    getGamesByGenre(genre){
+      return fetch (`https://rawg.io/api/games?genres=${genre}&page_size=200&page=1`).then(result => result.json())
+    },
+    getAllGenres(){
+      return fetch (`https://api.rawg.io/api/genres`).then(results => results.json())
+    },
+    getDevelopers(){
+      return fetch (`https://api.rawg.io/api/developers&page_size=20`).then(results => results.json())
+    },
+    getDeveloperGames(id){
+      return fetch (`https://api.rawg.io/api/games?developers=${id}`).then(results => results.json())
     },
 
     getUser(username, password) {
@@ -95,4 +113,6 @@ export default {
     getReviewId(id){
       return fetch(`${remoteURL}/reviews/${id}`).then(results => results.json())
     }
+
+
 }
