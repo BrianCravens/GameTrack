@@ -24,7 +24,7 @@ export default {
       return fetch (`https://api.rawg.io/api/genres`).then(results => results.json())
     },
     getDevelopers(){
-      return fetch (`https://api.rawg.io/api/developers&page_size=20`).then(results => results.json())
+      return fetch (`https://api.rawg.io/api/developers`).then(results => results.json())
     },
     getDeveloperGames(id){
       return fetch (`https://api.rawg.io/api/games?developers=${id}`).then(results => results.json())
@@ -57,6 +57,12 @@ export default {
         body: JSON.stringify(gameObject),
       }).then((data => data.json()))
     },
+    deleteGame(id){
+      return fetch(`${remoteURL}/games/${id}`, {
+      method: "DELETE"
+      }).then(results => results.json())
+    },
+    
     getUserGame(gameApiId) {
       return fetch(`${remoteURL}/games?gameApiId=${gameApiId}`).then(results => results.json())
     },

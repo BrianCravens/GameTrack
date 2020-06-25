@@ -48,7 +48,7 @@ const handleCheckboxSave = (e) => {
 e.preventDefault()
 setIsLoading(true)
   const editedGame = {
-    userId: loggedUser,
+    userId: parseInt(loggedUser),
     name: game.name,
     gameApiId: props.gameId,
     isFavorite: checkboxes.fav,
@@ -56,18 +56,26 @@ setIsLoading(true)
     isCompletion: checkboxes.comp
   }
   GameManager.getUserGameProps(props.gameId, sessionStorage.getItem("credentials")).then((userGame) => {
-    if (userGame.length !== 0){
+    if (checkboxes.fav == false && checkboxes.wish == false && checkboxes.comp == false && userGame.length > 0){
+      GameManager.deleteGame(userGame[0].id)
+      window.alert("Game removed from your account")
+      props.history.push(`/games`)
+
+    }else if (userGame.length != 0){
       GameManager.updateUserGame(editedGame,userGame[0].id).then(() => {
         window.alert("Your game has been updated!")
         props.history.push(`/games`)
       })
-    }else{
+    }else if (checkboxes.fav == true || checkboxes.wish == true || checkboxes.comp == true && userGame.length == 0){
       GameManager.createGame(editedGame).then((newgame) => {
         window.alert("Game has been added to your account!")
         props.history.push(`/games`)
       })
+    }else{
+      window.alert("Please select a list to save to")
     }            
   })
+  setIsLoading(false)
 }
 useEffect(() => {
     GameManager.get(props.gameId)
@@ -77,6 +85,7 @@ useEffect(() => {
     getReviews()
     setIsLoading(false)
 },[props.gameId]);
+
 
 useEffect(() => {
   GameManager.getUserGameProps(props.gameId, sessionStorage.getItem("credentials")).then((userGame)=>{
@@ -120,7 +129,7 @@ useEffect(() => {
         <input onChange={handleCheckBoxes} className= "checkbox"id="wish" type="checkbox" checked={checkboxes.wish} ></input>
         <label className= "label-checkbox" htmlFor="comp">Add to Completions</label>
         <input onChange={handleCheckBoxes} className= "checkbox"id="comp" type="checkbox" checked={checkboxes.comp} ></input>
-        <button onClick={handleCheckboxSave} className="save-checkbox">Save Game</button>
+        <button onClick={handleCheckboxSave} className="save-checkbox">Save</button>
       </div>}
 
       <div className= "all-reviews-container">

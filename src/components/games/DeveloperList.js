@@ -41,6 +41,6 @@ return(
         </div>
     </section>
     </>
-)
+    )
 }
 export default DeveloperList

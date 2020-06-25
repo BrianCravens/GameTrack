@@ -39,7 +39,7 @@ const Login = props => {
         window.alert("Please fill out all fields");
       } else {
         GameManager.createUser(credentials).then((newUser) => {
-          props.setUser(newUser[0])
+          props.setUser(newUser)
           props.history.push('/games')
           window.alert("Your account has been created!");
         });

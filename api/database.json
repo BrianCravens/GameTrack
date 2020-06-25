@@ -14,6 +14,21 @@
       "username": "Derick",
       "password": "0033",
       "id": 4
+    },
+    {
+      "username": "cwandann",
+      "password": "Jewell56",
+      "id": 5
+    },
+    {
+      "username": "Wanda",
+      "password": "0033",
+      "id": 6
+    },
+    {
+      "username": "Connor",
+      "password": "0033",
+      "id": 7
     }
   ],
   "games": [
@@ -67,7 +82,7 @@
       "name": "Life is Strange",
       "gameApiId": 3439,
       "isFavorite": false,
-      "isWishList": true,
+      "isWishList": false,
       "isCompletion": false,
       "id": 7
     },
@@ -93,19 +108,10 @@
       "userId": 1,
       "name": "Portal 2",
       "gameApiId": 4200,
-      "isFavorite": false,
-      "isWishList": true,
-      "isCompletion": false,
-      "id": 10
-    },
-    {
-      "userId": "1",
-      "name": "The Witcher 3: Wild Hunt",
-      "gameApiId": 3328,
       "isFavorite": true,
-      "isWishList": false,
+      "isWishList": true,
       "isCompletion": true,
-      "id": 11
+      "id": 10
     },
     {
       "userId": 1,
@@ -144,7 +150,7 @@
       "id": 15
     },
     {
-      "userId": "1",
+      "userId": 1,
       "name": "Tomb Raider (2013)",
       "gameApiId": 5286,
       "isFavorite": true,
@@ -153,7 +159,7 @@
       "id": 16
     },
     {
-      "userId": "1",
+      "userId": 1,
       "name": "Uncharted 2: Among Thieves",
       "gameApiId": 22513,
       "isFavorite": true,
@@ -162,7 +168,7 @@
       "id": 17
     },
     {
-      "userId": "1",
+      "userId": 1,
       "name": "Fortnite: Save The World",
       "gameApiId": 28131,
       "isFavorite": true,
@@ -171,7 +177,7 @@
       "id": 18
     },
     {
-      "userId": "1",
+      "userId": 1,
       "name": "God of War (2005)",
       "gameApiId": 29179,
       "isFavorite": true,
@@ -180,7 +186,7 @@
       "id": 19
     },
     {
-      "userId": "1",
+      "userId": 1,
       "name": "God of War: Ascension",
       "gameApiId": 3882,
       "isFavorite": true,
@@ -189,23 +195,43 @@
       "id": 20
     },
     {
-      "userId": "1",
+      "userId": 1,
       "name": "God of War II",
       "gameApiId": 39707,
       "isFavorite": true,
       "isWishList": false,
       "isCompletion": true,
       "id": 21
-    }
-  ],
-  "reviews": [
+    },
+    {
+      "userId": 7,
+      "name": "Grand Theft Auto V",
+      "gameApiId": 3498,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": false,
+      "id": 22
+    },
+    {
+      "userId": 1,
+      "name": "PAYDAY 2",
+      "gameApiId": 3939,
+      "isFavorite": false,
+      "isWishList": false,
+      "isCompletion": false,
+      "id": 23
+    },
     {
       "userId": 1,
       "name": "The Witcher 3: Wild Hunt",
-      "id": 3,
       "gameApiId": 3328,
-      "description": "Love This Game!!"
-    },
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 24
+    }
+  ],
+  "reviews": [
     {
       "userId": 1,
       "name": "Portal 2",
@@ -258,9 +284,8 @@
     {
       "userId": 1,
       "name": "The Elder Scrolls V: Skyrim",
-      "gameApiId": 5679,
-      "description": "Awesome game! I believe I wasted 500hrs of my life I'll never get back playing it.  So use with moderation.",
-      "id": 12
+      "id": 12,
+      "gameApiId": 5679
     },
     {
       "userId": 1,
@@ -282,6 +307,13 @@
       "gameApiId": 28131,
       "description": "Fun if you have people to play with.  Also it definitely takes time to get good at building so be prepared to get destroyed for a while. Darn kids",
       "id": 16
+    },
+    {
+      "userId": 7,
+      "name": "Grand Theft Auto V",
+      "gameApiId": 3498,
+      "description": "I love seeing how far I can launch a guy off his motorcycle.",
+      "id": 17
     }
   ]
 }

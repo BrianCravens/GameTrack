@@ -16,29 +16,20 @@ const MyReviewCard = (props) => {
     };
      useEffect(() =>{
         getUserGame(props.review.id);  
-        console.log(games)
     }, [props.review.id])
-    //  useEffect(() =>{  
-    //     console.log(games)
-    // }, [games])
+   
     return(
         <div className="card">
-            <Link to ={`/games/${games.id}`}>
-            <div className="card-content">
-                <picture>
-                    <img src={games.background_image} alt={"background image" + props.review.id}/>
-                </picture>
-                <h3>
-                    <span className = "card-name">{props.review.name}</span>
-                </h3>
-            <p>{props.review.description}</p>
-                {/* <div className = "genre-container">
-                    {props.game.genres.slice(0,2).map(genre => <p key={genre.id} className = "genre">{genre.name}</p>)}
-                </div>
-            <p className = "rating">{props.game.rating}</p> */}
-            <div className = "Info">
-            {/* <button className = "btn-Info" onClick={() => props.history.push(`/games/${games.id}`)}>Info</button> */}
-            </div></div>
+            <Link to ={`/games/${games.id}`} style={{ textDecoration: 'none' }}>
+            <div textDec className="card-content">
+            <picture>
+                <img src={games.background_image} alt={"background image" + props.review.id}/>
+             </picture>
+            <h3>
+                <span className = "card-name">{props.review.name}</span>
+            </h3>
+            <p className="myreview-description">{props.review.description}</p>
+            </div>
             </Link>
         </div>
     )

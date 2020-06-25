@@ -57,7 +57,7 @@ const GameList = (props) => {
         <section className="section-content">
             <div className="select-container">
                 <label className="genre-label" htmlFor= "genre">Filter by Genre</label>
-                <select className="filter-genre" id="genre" onSelect={getGenreGames} onChange={handleSelection}>{genres.map(MakeList => <option value = {MakeList.id}>{MakeList.name}</option>)}</select>
+                <select className="filter-genre" id="genre" onSelect={getGenreGames} onChange={handleSelection}>{genres.map(MakeList => <option key={MakeList.id} value = {MakeList.id}>{MakeList.name}</option>)}</select>
             <div className="search-container">
                 <input onChange={handleFieldChange} className= "search-input" type="Text" placeholder="Search"></input>
                 <button onClick={searchGames} className= "search-btn">Search</button>
