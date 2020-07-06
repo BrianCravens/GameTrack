@@ -5,8 +5,8 @@ import "../../App.css";
 
 const Completions = (props) => {
     const [games, setGames] = useState([]);
-    const getUserGames = () => {
-        return GameManager.getCompList().then(compList => {
+    const getUserGames = (id) => {
+        return GameManager.getCompList(id).then(compList => {
             const gameFetches = compList.map(game => GameManager.get(game.gameApiId))
             Promise.all(gameFetches)
             .then((games) => {
@@ -15,7 +15,7 @@ const Completions = (props) => {
         })  
     };
     useEffect(() => {
-        getUserGames();
+        getUserGames(sessionStorage.getItem("credentials"));
     }, []);
     useEffect(() => {
     }, [games]);

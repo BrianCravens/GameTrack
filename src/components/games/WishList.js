@@ -5,8 +5,8 @@ import "../../App.css";
 
 const WishList = (props) => {
     const [games, setGames] = useState([]);
-    const getUserGames = () => {
-        return GameManager.getWishList().then(wishList => {
+    const getUserGames = (id) => {
+        return GameManager.getWishList(id).then(wishList => {
             const gameFetches = wishList.map(game => GameManager.get(game.gameApiId))
             Promise.all(gameFetches)
             .then((games) => {
@@ -15,7 +15,8 @@ const WishList = (props) => {
         })  
     };
     useEffect(() => {
-        getUserGames();
+        getUserGames(sessionStorage.getItem("credentials"));
+        console.log(sessionStorage.getItem("credentials"))
     }, []);
     useEffect(() => {
         console.log("games",games)

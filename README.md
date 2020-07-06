@@ -1,68 +1,53 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A front-end capstone project from [Brian Cravens](https://github.com/BrianCravens) for [Nashville Software School C40](https://github.com/nss-day-cohort-40).
 
-## Available Scripts
+## Brief Proposal
 
-In the project directory, you can run:
+Video game enthusiasts that want to be able to keep track of the video games that they have completed, which of those are their favorites, and keep track of the ones they have yet to play.  Game Track is an App that allows you to do just that with the power of the RAWG API.  You can search through thousands of games and create your lists as well as keeping them updated.  
 
-### `npm start`
+## Project Definition
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Written in React.
+* Users can create account, login , and logout
+* Ability to create, read, update, delete “Completed Games List, Wish List, and Favorites List,”
+* Ability to create, read, update, delete “User Specific Reviews”
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Setup
 
-### `npm test`
+Steps to get started:
+1. `git clone git@github.com:BrianCravens/GameTrack.git`
+1. `cd` into the directory it creates
+1. `mkdir api`
+1. `touch api/`
+1. Download one of the database files:
+    1. [EMPTY: database.json](https://docs.google.com/document/d/1SH22dRl5K3aSCrFXyuMVH7uxV0swRcte8RZzOfJVkB0/edit?usp=sharing) 
+1. Move your database.json file into the /api/ directory.
+1. `npm install` to build dependencies
+1. `npm start` to run the app in the development mode
+1. `json-server -p 5002 -w api/database.json`
+1. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Overview
 
-### `npm run build`
+This app is a personal Game Tracker for video game enthusiasts. When a user logs in, they will then have the options of creating their different lists.  From the starting page you can sort games by genre or use the search field.  After clicking on a game, you then have the options to select the game to be on a certain list, Completions, Favorites, or Wish List.  There is also the ability in the Game Details for logged in users to write reviews on games.  
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Technologies Used
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This project utilizes the following:
+* This project was created with [Create React App](https://github.com/facebook/create-react-app).
+* [React Router](https://reacttraining.com/react-router/) for page routing
+* [React-bootstrap](https://react-bootstrap.github.io/) for menu, flexible formatting
+* [RAWG API](https://rawg.io/apidocs) for Video Game data
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Skills Utilized
 
-### `npm run eject`
+We utilized all skills and concepts learned up to this point in our time here at NSS, including:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. React: hooks, state, props, routes
+1. API calls with: POST, PUT, PATCH, DELETE, and GET (with expand, embed)
+1. Javascript: functions, objects, arrays, mapping
+1. Persistent data storage with JSON Server
+1. Github Scrum workflow
+1. CSS styling
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+## Database Diagram
+![Game Track Database](./public/GameTrackERD.png)

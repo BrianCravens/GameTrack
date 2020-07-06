@@ -1,7 +1,54 @@
+body{
+  color: aliceblue;
+background-color: black;
+}
 .section-content {
   background-color: rgb(40, 168, 34);
+  background-size: cover;
   justify-content: center;
   text-align: center;
+  flex-wrap: wrap;
+}
+.select-container{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+.search-container{
+  display: flex;
+  justify-content: flex-end;
+  flex: 50%
+}
+.genre-label{
+  font-size: larger;
+  font-weight: bold;
+  padding-left: 1em;
+  padding-right: 1em;
+  color:black;
+}
+.myreview-description{
+  padding-top: 1em;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none;
+}
+.game-name-h3{
+  background-color: rgb(46, 46, 46);
+}
+.game-card-link{
+
+}
+.filter-genre{
+  background-color: aliceblue;
+  align-content: flex-end;
+  justify-content: start;
+}
+.search-input{
+  background-color: aliceblue;
+  justify-content: flex-end;
+  padding-right: 8em;
+  color: #000000;
 }
 .card {
   /* Add shadows to create the "card" effect */
@@ -10,13 +57,35 @@
   border-radius: 5px; /* 5px rounded corners */
   background: rgb(10, 10, 10);
   margin: 1px;
-  flex: 0 0 19%;
+  margin-bottom: 3em;
+  flex: 0 0 20%;
+}
+.count{
+  font-size: larger;
+  font-weight: bold;
+}
+.card:hover{
+  text-decoration: none;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.685), 0 10px 10px rgba(0, 0, 0, 0.459);
+  border-left: 8px solid rgb(40, 168, 34);
+}
+.card:link{
+  text-decoration: none;
 }
 
+
+.platform-icons{
+  display: flex;
+  padding-top: 1em;
+  justify-content: space-evenly;
+}
 .card-content {
   text-align: center;
-  padding: 1em;
+  /* padding: 1em; */
   color: aliceblue;
+}
+.card-content:link{
+  text-decoration: none;
 }
 .card-name {
 }
@@ -60,18 +129,23 @@
   color: rgb(245, 246, 248);
 }
 .rating {
-  text-align: right;
+  text-align: center;
   color: green;
+  font-size: larger;
   font-weight: bold;
+  justify-content: flex-end;
 }
 .container-cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-color: rgb(40, 168, 34);
+  background-size: cover;
 }
 img {
   display: block;
   border: 0;
   width: 100%;
-  height: 175px;
+  height: 100%;
+  max-height: 250px;
 }

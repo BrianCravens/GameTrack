@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import {withRouter} from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 import { Form } from 'react-bootstrap'
-
+import './Login.css'
 import GameManager from "../../modules/GameManager"
 
 
@@ -39,7 +39,7 @@ const Login = props => {
         window.alert("Please fill out all fields");
       } else {
         GameManager.createUser(credentials).then((newUser) => {
-          props.setUser(newUser[0])
+          props.setUser(newUser)
           props.history.push('/games')
           window.alert("Your account has been created!");
         });
@@ -49,7 +49,7 @@ const Login = props => {
   }
 
   return (
-      <div>
+      <div className = "login-container">
     <Form onSubmit = {handleLogin}>
     <Form.Group controlId="username">
       <Form.Label>Username</Form.Label>
