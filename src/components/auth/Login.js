@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import {withRouter} from 'react-router-dom'
 import { Button } from 'react-bootstrap';
 import { Form } from 'react-bootstrap'
-
+import './Login.css'
 import GameManager from "../../modules/GameManager"
 
 
@@ -49,7 +49,7 @@ const Login = props => {
   }
 
   return (
-      <div>
+      <div className = "login-container">
     <Form onSubmit = {handleLogin}>
     <Form.Group controlId="username">
       <Form.Label>Username</Form.Label>

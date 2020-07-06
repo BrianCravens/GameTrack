@@ -29,6 +29,7 @@ const ReviewCard = (props) => {
     const handleDelete = (id) => {
         setIsLoading(true)
         GameManager.deleteReview(id)
+        setIsLoading(false)
         getReviews()
     }
     const handleEdit = (event) => {

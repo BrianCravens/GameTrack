@@ -1,5 +1,6 @@
 .game-details{
   background-color: black;
+  background-size: cover;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -9,6 +10,9 @@
 .video-container{
   align-items: center;
 }
+img{
+  max-width: 600px;;
+}
 
 .modal-container{
   display: flex;
@@ -17,12 +21,12 @@
   width: 600px;
   height: 200px;
   position: fixed;
-  top: 400px;
-  left: 400px;
+  top: 50%;
+  left: 40%;
 }
 .modal-textarea{
   width: 600px;
-  height: 100px;
+  height: 200px;
 }
 .checkbox-container{
   font-size: large;
@@ -101,12 +105,16 @@
   background-color: silver;
   justify-content: flex-end;
 }
+
 .review-cards{
+  background-color: black;
   align-items: center;
   flex: 100%;
 }
 .all-reviews-container{
   flex: 100%;
+  background-color: black;
+  background-size: stretch;
 }
 /* New Review */
  .new-form-container{

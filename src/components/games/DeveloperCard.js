@@ -12,8 +12,6 @@ const DeveloperCard = (props) => {
                     <span className = "card-name">{props.developer.name}</span>
                 </h3>
             <p className = "count">Game Count: {props.developer.games_count}</p>
-            <div className = "Info">
-            </div>
             </div>
             </Link>
         </div>
