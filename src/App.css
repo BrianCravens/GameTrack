@@ -1,6 +1,6 @@
 body{
   color: aliceblue;
-background-color: black;
+  background-color: black;
 }
 .section-content {
   background-color: rgb(40, 168, 34);
@@ -36,9 +36,6 @@ background-color: black;
 .game-name-h3{
   background-color: rgb(46, 46, 46);
 }
-.game-card-link{
-
-}
 .filter-genre{
   background-color: aliceblue;
   align-content: flex-end;
@@ -59,6 +56,7 @@ background-color: black;
   margin: 1px;
   margin-bottom: 3em;
   flex: 0 0 20%;
+  min-width: 200px;
 }
 .count{
   font-size: larger;
@@ -73,12 +71,6 @@ background-color: black;
   text-decoration: none;
 }
 
-
-.platform-icons{
-  display: flex;
-  padding-top: 1em;
-  justify-content: space-evenly;
-}
 .card-content {
   text-align: center;
   /* padding: 1em; */
@@ -86,11 +78,6 @@ background-color: black;
 }
 .card-content:link{
   text-decoration: none;
-}
-.card-name {
-}
-.genre-container {
-  padding-top: 1em;
 }
 .Info {
   display: flex;
@@ -115,18 +102,28 @@ background-color: black;
   color:#000000;
   background-color: white;
 }
-
-.genre {
-  text-align: center;
-  flex-basis: 50%;
-  align-self: flex-end;
+.platform-icons{
+  display: flex;
+  padding-top: 1em;
+  justify-content: space-evenly;
+}
+.genre-container {
+  display: flex;
+  padding-top: 1em;
+  justify-content: space-evenly;
 }
 .card-content h3 {
   text-align: center;
   margin-top: 0;
   margin-bottom: 0em;
   font-weight: bold;
-  color: rgb(245, 246, 248);
+  font-size: 20px;
+  color: rgb(248, 247, 247);
+}
+.rating-container{
+  display: flex;
+  flex-direction: column-reverse;
+  padding-top: 2em;
 }
 .rating {
   text-align: center;
@@ -141,11 +138,11 @@ background-color: black;
   justify-content: space-evenly;
   background-color: rgb(40, 168, 34);
   background-size: cover;
+  min-width: 1250px;
 }
 img {
   display: block;
   border: 0;
-  width: 100%;
-  height: 100%;
-  max-height: 250px;
+  width: 300px;
+  height: 200px;
 }

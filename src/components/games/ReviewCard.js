@@ -9,6 +9,7 @@ const ReviewCard = (props) => {
     const [username, setUsername] = useState({})
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [review, setReview] = useState({})
+    const [toggle, setToggle] = useState(false)
     const getUsername = (id) => {
         GameManager.getUserId(id).then(user => {
             setUsername(user)
@@ -30,7 +31,8 @@ const ReviewCard = (props) => {
         setIsLoading(true)
         GameManager.deleteReview(id)
         setIsLoading(false)
-        getReviews()
+        setToggle(!toggle)
+
     }
     const handleEdit = (event) => {
         event.preventDefault()
@@ -55,6 +57,10 @@ const ReviewCard = (props) => {
         getUsername(props.review.userId)
 
     },[props.review.userId])
+
+    useEffect(() => {
+        getReviews()
+    }, [toggle] )
 
 
     return(

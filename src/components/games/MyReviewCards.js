@@ -23,7 +23,7 @@ const MyReviewCard = (props) => {
             <Link to ={`/games/${games.id}`} style={{ textDecoration: 'none' }}>
             <div textDec className="card-content">
             <picture>
-                <img src={games.background_image} alt={"background image" + props.review.id}/>
+                <img className="card-img" src={games.background_image} alt={"background image" + props.review.id}/>
              </picture>
             <h3>
                 <span className = "card-name">{props.review.name}</span>

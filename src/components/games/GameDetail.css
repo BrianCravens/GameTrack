@@ -91,7 +91,7 @@ img{
   background-color:rgb(40, 168, 34);
   color: aliceblue;
 }
-.genre-container{
+.details-genre-container{
   font-size: large;
   flex: 100%;
   flex-direction: column;

@@ -6,11 +6,6 @@ import "../../App.css";
 const MyReviewsList = (props) => {
     const [reviews, setReviews] = useState([]);
     
-    // const getUserReviews = () => {
-    //     return GameManager.getUserReviews(sessionStorage.getItem("credentials")).then(reviews => {        
-    //         setReviews(reviews)
-    //     });
-    // };
     useEffect(() => {
         const user = sessionStorage.getItem("credentials")
             GameManager.getUserReviews(user).then(myReviews => {        

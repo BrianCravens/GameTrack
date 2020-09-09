@@ -115,7 +115,7 @@ useEffect(() => {
           <span></span>
           </h3>
         <p className = "game-description">{game.description_raw}</p>
-        <div className = "genre-container">
+        <div className = "details-genre-container">
         <h3>Genres</h3>
         {game.genres.map(genre => <p key={genre.id} className = "details-genre">{genre.name}</p>)}
         <h3>Developers</h3>
@@ -146,7 +146,7 @@ useEffect(() => {
         </form>}
       </div>
         <div className = "review-cards">
-          {gameReviews.map(review => <ReviewCard setGameReviews={setGameReviews} review={review} key={review.id} {...props}/>)}
+          {gameReviews.map(review => <ReviewCard gameReviews={gameReviews} setGameReviews={setGameReviews} review={review} key={review.id} {...props}/>)}
         </div>
       </div>
     </div>

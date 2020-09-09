@@ -23,10 +23,12 @@ const GameCard = (props) => {
                     }})}
                 </div>}
                 <div className = "genre-container">
-                    {props.game.genres.slice(0,2).map(genre => <p key={genre.id} className = "genre">{genre.name}</p>)}
+                    {props.game.genres.slice(0,2).map(genre => <div key={genre.id} className = "genre">{genre.name}</div>)}
                 </div>
             </div>
+            <div className="rating-container">
             <div className="rating">{props.game.rating}</div>
+            </div>
             </Link>
         </div>
     )
