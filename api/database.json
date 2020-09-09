@@ -29,6 +29,11 @@
       "username": "Connor",
       "password": "0033",
       "id": 7
+    },
+    {
+      "username": "Donald",
+      "password": "1234",
+      "id": 8
     }
   ],
   "games": [
@@ -367,15 +372,6 @@
     },
     {
       "userId": 1,
-      "name": "The Walking Dead: Season 1",
-      "gameApiId": 23027,
-      "isFavorite": false,
-      "isWishList": true,
-      "isCompletion": false,
-      "id": 41
-    },
-    {
-      "userId": 1,
       "name": "MORTAL KOMBAT X",
       "gameApiId": 108,
       "isFavorite": false,
@@ -508,6 +504,24 @@
       "isWishList": false,
       "isCompletion": true,
       "id": 56
+    },
+    {
+      "userId": 8,
+      "name": "The Witcher 3: Wild Hunt",
+      "gameApiId": 3328,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": false,
+      "id": 57
+    },
+    {
+      "userId": 7,
+      "name": "Dead Space",
+      "gameApiId": 4570,
+      "isFavorite": true,
+      "isWishList": false,
+      "isCompletion": true,
+      "id": 58
     }
   ],
   "reviews": [
@@ -548,13 +562,6 @@
     },
     {
       "userId": 1,
-      "name": "Red Dead Redemption 2",
-      "gameApiId": 28,
-      "description": "Do you like fishing? Do you like roping people and dragging them behind your horse? Or just enjoy shooting stuff?  Then this game is for you! ",
-      "id": 11
-    },
-    {
-      "userId": 1,
       "name": "Borderlands 2",
       "gameApiId": 802,
       "description": "Awesome game, but definitely a game you want to play with a friend! Co-op is tons of fun here.",
@@ -584,16 +591,9 @@
     {
       "userId": 1,
       "name": "Surgeon Simulator",
+      "id": 18,
       "gameApiId": 2778,
-      "description": "So brutal!",
-      "id": 18
-    },
-    {
-      "userId": 1,
-      "name": "Uncharted 2: Among Thieves",
-      "gameApiId": 22513,
-      "description": "Great game, love the historical aspect of it!",
-      "id": 19
+      "description": "So brutal dude"
     },
     {
       "userId": 1,
@@ -629,6 +629,20 @@
       "gameApiId": 5679,
       "description": "Spent around 500 hours on this game I'll never get back, but totally worth it.  Just wait till you get smacked by a giant...",
       "id": 24
+    },
+    {
+      "userId": 1,
+      "name": "Red Dead Redemption 2",
+      "id": 25,
+      "gameApiId": 28,
+      "description": "This game is dope!!!"
+    },
+    {
+      "userId": 1,
+      "name": "Borderlands 2",
+      "gameApiId": 802,
+      "description": "Boarderlands is Awesome!",
+      "id": 26
     }
   ]
 }
